@@ -4,16 +4,11 @@ I will explain how to use the files and our code. Additionally, we will attach a
 
 After downloading all the uploaded asda files, you should run the init file. Please make sure to install the open API and set up the Anaconda virtual environment before running.
 
-<<Important points when running the program!!!!!>>
 After setting up the Open API usage and the 32-bit virtual environment, download the files we have uploaded and run the __init__.py file contained within those files. When running this program, you must forcibly set Anaconda to 32-bit, and it is crucial to set the interpreter correctly by creating a virtual environment with Python 3.7 during the virtual environment setup. If the Python version differs, there is a high likelihood of package setup issues, so we recommend using Python 3.7 within the virtual environment.
 
 Once these settings are complete, you must actually install the Open API. Go to the Kiwoom Securities website, click on Open API, apply for and install the API. Then, install KOA Studio, which can unpack two files. Put these two files in the open API file on the C drive.
 
-<<Below is the method for setting up Anaconda in 32-bit.>>
-
 Since the Kiwoom Securities API is optimized for 32-bit, setting the environment is important. After installing Anaconda, open the cmd window and enter `set CONDA FORCE32BIT=1`. This step sets the Anaconda environment to 32-bit. Enter `conda create -n (desired name) python=3.7 anaconda`. This step creates a virtual environment with the name you want that includes Python 3.7. Now it will be installed. You can check the file path of the created virtual environment with `conda env list`. Activate it by entering `activate (set file name)`, then enter `python` to check if it is displayed as 32-bit. If the Python information is correctly displayed as 32-bit, you should set the python.exe file in that virtual environment file path as the interpreter.
-
-<<Below is a description of the project process.>>
 
 We used SNS to verify various investment rationales and service intentions, finding that while people can easily access information, interpreting it and dealing with increasing amounts becomes challenging. Thus, we aimed to create a stock recommendation service for investors' convenience.
 In the first stage, we selected stocks based on technical analysis, and in the second stage, we reselected them based on the industry PER. In the final stage, we brought up the last month's news (10 articles) and the stock names of the finally selected stocks.
